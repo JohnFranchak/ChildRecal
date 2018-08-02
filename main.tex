@@ -8,7 +8,7 @@
 \usepackage{apacite}
 \raggedbottom
 
-\title{Development of affordance perception and recalibration}
+\title{Development of affordance perception and recalibration in children and adults}
 \shorttitle{Affordance Perception and Recalibration}
 \author{John M. Franchak}
 \affiliation{University of California, Riverside}
@@ -62,12 +62,12 @@ For each ability trial, the experimenter set the doorway to a particular size an
 
 \subsection{Data analysis}
 
-The goal of data analysis was to determine the accuracy and bias of decisions by comparing decision data to ability data. As in past work \citep{Recal,PregAps}, cumulative Gaussian functions were fit to decision data (proportion “yes” responses at each doorway width) and ability data (proportion successful passage at each doorway width). Decision functions used only trials from the decision trial block; ability functions used “yes” trials from the decision trial block (in which participants attempted to pass through the doorway) in addition to ability trials. Maximum likelihood fits for the threshold of each function were calculated using the Palamedes toolbox \citep{KingdomPrins} in Matlab. Parametric bootstraps with 1000 Monte Carlo iterations determined 95\% confidence intervals for threshold parameters. 
+The goal of data analysis was to determine the accuracy and bias of decisions by comparing decision data to ability data. As in past work \citep{Recal,PregAps}, cumulative Gaussian functions were fit to decision data (proportion “yes” responses at each doorway width) and ability data (proportion successful passage at each doorway width) (Figure \ref{fig:curvefit}). For example, Figure \ref{fig:curvefit} shows that the participant fit through the 28-cm doorway 100\% of the time but only responded "yes, I can fit through" to the 28-cm doorway 33.3\% of the time (1/3 trials). Decision functions used only trials from the decision trial block; ability functions used “yes” trials from the decision trial block (in which participants attempted to pass through the doorway) in addition to ability trials. Maximum likelihood fits for the threshold of each function were calculated using the Palamedes toolbox \citep{KingdomPrins} in Matlab. Parametric bootstraps with 1000 Monte Carlo iterations determined 95\% confidence intervals for threshold parameters. 
 
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=1\textwidth]{error.eps}
-\caption{\label{fig:curvefit}(A) Absolute error and (B) constant error by age group and condition. Red symbols show the unmodified ability condition (UA) and blue symbols show the modified abilities condition (MA). Error bars show ± 1 SE.}
+\includegraphics[width=.85\textwidth]{curvefit.eps}
+\caption{\label{fig:curvefit}Example of ability  and decision function fits to a young child's data in the manipulated ability condition. Blue circles show the rate of successful attempts at each doorway width and orange squares show the rate of "yes" responses at each doorway width. Grey dashed line connecting the ability threshold and decision thresholds (50\% points of each function) shows the magnitude of calibration error.}
 \end{figure}
 
 Decision thresholds reflected the doorway width that participants judged to be possible to fit through 50\% of the time. Decision thresholds were fit well for each age based on relatively small confidence intervals for younger children ($M$ = 18.9 cm ± 1.62), older children ($M$ = 20.6 cm ± 1.54), and adults ($M$ = 24.3 cm ± 1.14). Although confidence intervals appeared to be marginally smaller for adults, confidence interval size did not differ by age group in a one-way ANOVA ($p$ = .09). Ability thresholds indicated the doorway width that participants successfully fit through 50\% of the time. Small confidence intervals around ability threshold estimates for younger children ($M$ = 17.6 cm ± 0.58), older children ($M$ = 19.3 cm ± 0.54), and adults ($M$ = 23.8 cm ± 0.40) indicate good fits. Confidence interval size did not differ by age group in a one-way ANOVA ($p$ = .65).
@@ -76,7 +76,9 @@ For a small subset of participants, decision functions could not be fit because 
 
 \section{Results}
 
-Judgment accuracy and bias were calculated based on decision and ability thresholds. Accuracy was indexed by \textit{absolute judgment error}---the magnitude of errors regardless of direction---which was calculated by taking the absolute value of the difference between decision and ability thresholds. \textit{Constant error} represented bias in participants’ judgments and was calculated by subtracting ability thresholds from decision thresholds. Absolute errors were not distributed normally because they were bounded at 0. Additionally, preliminary analyses revealed significant Levene’s tests for violation of homogeneity of variance when testing both absolute and constant errors in ANOVAs. Thus, non-parametric permutation ANOVAs and t-tests were used because they do not require those assumptions \citep{Edgington}. Permutation tests were conducted in R using the \textit{ez} and \textit{rcompanion} packages using 1000 iterations. Effect size estimates (generalized $\eta^{2}$) were derived from parametric ANOVAs calculated using the \textit{ez} package. $p$ values in follow-up tests were adjusted for multiple comparisons with the Holm-Bonferroni correction.
+Judgment accuracy and bias were calculated based on decision and ability thresholds. Accuracy was indexed by \textit{absolute judgment error}---the magnitude of errors regardless of direction---which was calculated by taking the absolute value of the difference between decision and ability thresholds. The length of the gray dashed line in Figure \ref{fig:curvefit} shows the absolute judgment error for the example participant. \textit{Constant error} represented bias in participants’ judgments and was calculated by subtracting ability thresholds from decision thresholds. For the example participant in Figure \ref{fig:curvefit}, the constant error was positive indicating that this participant tended to say no to doorways that were possible to fit through (i.e., 22-26 cm).
+
+Absolute errors were not distributed normally because they were bounded at 0. Additionally, preliminary analyses revealed significant Levene’s tests for violation of homogeneity of variance when testing both absolute and constant errors in ANOVAs. Thus, non-parametric permutation ANOVAs and t-tests were used because they do not require those assumptions \citep{Edgington}. Permutation tests were conducted in R using the \textit{ez} and \textit{rcompanion} packages using 1000 iterations. Effect size estimates (generalized $\eta^{2}$) were derived from parametric ANOVAs calculated using the \textit{ez} package. $p$ values in follow-up tests were adjusted for multiple comparisons with the Holm-Bonferroni correction.
 
 \subsection{Judgment accuracy}
 
@@ -84,8 +86,8 @@ Figure \ref{fig:error}A shows that absolute errors decreased with age for the UA
 
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=1\textwidth]{error.eps}
-\caption{\label{fig:error}(A) Absolute error and (B) constant error by age group and condition. Red symbols show the unmodified ability condition (UA) and blue symbols show the modified abilities condition (MA). Error bars show ± 1 SE.}
+\includegraphics[width=.85\textwidth]{error.eps}
+\caption{\label{fig:error}(A) Absolute error and (B) constant error by age group and condition. Red symbols show the unmodified ability condition (UA) and blue symbols show the modified ability condition (MA). Error bars show ± 1 SE.}
 \end{figure}
 
 \subsection{Judgment bias}
@@ -115,7 +117,7 @@ Figure \ref{fig:feedback} shows absolute error as a function of age, condition, 
 
 \begin{figure}[htb!]
 \centering
-\includegraphics[width=1\textwidth]{feedback.eps}
+\includegraphics[width=.85\textwidth]{feedback.eps}
 \caption{\label{fig:feedback}Absolute error by feedback group, age group and condition. Red symbols show the unmodified ability condition (UA) and blue symbols show the modified abilities condition (MA). Circular symbols depict the informative feedback group and square symbols show the uninformative feedback group. Error bars show ± 1 SE.}
 \end{figure}
 
